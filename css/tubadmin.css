@@ -1,0 +1,121 @@
+#adPanel{
+font: 12px/20px "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+max-width:900px;
+padding:12px/16px;
+border:#111 1px solid;
+margin:20px auto;
+position:relative;
+height:auto;
+
+}
+
+legend,label {
+ display: block;
+  margin-left: 3px;
+  padding-top: 2px;
+ 
+  }
+  
+fieldset,#forIntro{
+max-width:90%;
+margin:40px auto;
+position:relative;
+height:auto;
+overflow:hidden;
+padding:1%;
+border: 1px solid #111 ;
+}
+
+
+#configBox{
+background-repeat:no-repeat;
+background-position: top right;
+background-image: url(images/adminbanner.png);
+padding-top:10px;
+border-radius: 4px;
+}
+
+p.shelConfig{
+padding-bottom:8px;
+
+}
+p.submiters input[type='submit']{margin:0 10px}
+p.submiters input[type='submit']:nth-child(even){
+background-color:#800040; 
+color:#FFF; }
+legend,
+input.Lput{
+border-collapse:collapse; 
+border:#111 1px solid;
+height:30px;
+line-height:30px;
+padding:0 20px;
+}
+input.Lput{max-width:300px;width:300px;}
+input.subMit{
+border:0px; 
+background-color:#800040; 
+color:#FFF; 
+padding:10px; 
+cursor:pointer; 
+font-weight:bold; 
+}
+span.ref{background-color:#800040;color:#FFF; }
+input.subMit,legend,
+input.Lput,form{border-radius:5px;}
+
+.ReporterS{
+width:50%; 
+top:0;
+left:45%;
+position:absolute;
+-webkit-border-radius: 4px;
+
+  -moz-border-radius: 4px;
+
+  border-radius: 4px;
+
+  -webkit-box-shadow: 4px 4px 5px #111111;
+
+  -moz-box-shadow: 4px 4px 5px #111111;
+
+  box-shadow: 4px 4px 5px #111111;
+  padding:1%;
+  height:18px;
+  text-align:center;
+}
+legend:after,.ReporterS:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #111 transparent  transparent  transparent ;
+      bottom: 0;
+      left:50%;
+	  top:100%;
+}
+#weltext,legend{position:relative;margin-bottom:20px;}
+
+.showError{
+background-color:#FFA8A8; 
+color:#B00000;
+border: 1px solid #eee;
+}
+.showDone{
+background-color:#eee; 
+border: 1px solid green;
+color:green;
+}
+p img{float:left;margin-right:20px;}
+legend,em,strong{font-weight:bold}
+fieldset .divideus{
+	display:block;
+	float:left;
+	max-width:40%;
+	margin:4% 4%;
+	
+	}
+	fieldset .divideus input.Lput{max-width:90%;width:90%;}
+	fieldset .divideus label{display:inline;}

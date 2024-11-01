@@ -1,0 +1,1600 @@
+@charset "utf-8";
+@import url("font-awesome.css");
+@import url("//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css");
+@font-face {
+	font-family: 'Nova Square';
+	font-style: normal;
+	src: local('Nova Square'), local('NovaSquare'), url(./fonts/NovaSquare.woff2) format('woff2');
+unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+	font-family: 'Nova Square';
+	font-style: normal;
+	src: local('Nova Square'), local('NovaSquare'), url(./fonts/NovaSquare.ttf) format('truetype');
+unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+#TubPlayplayer a, #TubPlayplayer abbr, #TubPlayplayer acronym, #TubPlayplayer address, #TubPlayplayer applet, #TubPlayplayer article, #TubPlayplayer aside, #TubPlayplayer audio, #TubPlayplayer b, #TubPlayplayer blockquote, #TubPlayplayer big, #TubPlayplayer center, #TubPlayplayer canvas, #TubPlayplayer caption, #TubPlayplayer cite, #TubPlayplayer code, #TubPlayplayer command, #TubPlayplayer datalist, #TubPlayplayer dd, #TubPlayplayer del, #TubPlayplayer details, #TubPlayplayer dfn, #TubPlayplayer dl, #TubPlayplayer div, #TubPlayplayer dt, #TubPlayplayer em, #TubPlayplayer embed, #TubPlayplayer fieldset, #TubPlayplayer figcaption, #TubPlayplayer figure, #TubPlayplayer font, #TubPlayplayer footer, #TubPlayplayer form, #TubPlayplayer h1, #TubPlayplayer#TubPlayplayer input, #TubPlayplayer textarea, #TubPlayplayer h2, #TubPlayplayer h3, #TubPlayplayer h4, #TubPlayplayer h5, #TubPlayplayer h6, #TubPlayplayer header, #TubPlayplayer hgroup, #TubPlayplayer html, #TubPlayplayer i, #TubPlayplayer iframe, #TubPlayplayer img, #TubPlayplayer ins, #TubPlayplayer kbd, #TubPlayplayer keygen, #TubPlayplayer label, #TubPlayplayer legend, #TubPlayplayer li, #TubPlayplayer meter, #TubPlayplayer nav, #TubPlayplayer object, #TubPlayplayer output, #TubPlayplayer p, #TubPlayplayer pre, #TubPlayplayer progress, #TubPlayplayer q, #TubPlayplayer s, #TubPlayplayer samp, #TubPlayplayer section, #TubPlayplayer small, #TubPlayplayer span, #TubPlayplayer source, #TubPlayplayer strike, #TubPlayplayer strong, #TubPlayplayer sub, #TubPlayplayer sup, #TubPlayplayer table, #TubPlayplayer tfoot, #TubPlayplayer thead, #TubPlayplayer th, #TubPlayplayer tr, #TubPlayplayer tdvideo, #TubPlayplayer tt, #TubPlayplayer u, #TubPlayplayer ul, #TubPlayplayer var {
+	background-color: transparent;
+	border: none 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	vertical-align: top;
+	font-style: normal;
+	font-size: normal;
+	font-weight: normal;
+}
+blockquote, q {
+	quotes: none;
+}
+.wallpaperFrame {
+position: fixed;
+z-index: -99;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background-color:#000;
+}
+i.fa-exclamation-circle{background-color:red;background:red;color:yellow;}
+#TubPlayFrame .red{color:red;}
+#TubPlayFrame i.red{background-color:#fff;padding:5px 5px;}
+#TubPlayFrame {	
+	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
+}
+#TubPlayFrame {
+	font-size:13px;
+	font-weight: none;
+	max-width: 900px;
+	position: relative;
+	color: white;
+	margin: 0 auto;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+
+#TubPlayFrame a#BulkyNextToken,
+#TubPlayFrame a#BulkyPrevToken,
+#TubPlayFrame a#autOff,
+#TubPlayFrame a#autOn,
+#TubPlayFrame a#List,
+#TubPlayFrame a#Live,
+#TubPlayFrame a#TubRightN,
+#TubPlayFrame a#TubLeftN,
+#TubPlayFrame a[data-token='MainNextToken'],
+#TubPlayFrame a[data-token='MainPrevToken'],
+#TubPlayFrame a.curveRight,
+#TubPlayFrame a.curveLeft{color:#fff!important;}
+#TubPlayFrame img {
+	float: left;
+	margin: 0 auto;
+	vertical-align: top;
+}
+#TubPlayFrame a {
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+}
+#TubPlayFrame {
+	font-family: 'Nova Square', cursive;
+}
+#TubPlayFrame a, #TubPlayFrame li {
+	transition: All 1s ease;
+	-webkit-transition: All 1s ease;
+	-moz-transition: All 1s ease;
+	-o-transition: All 1s ease;
+}
+#TubPlayFrame .curveBoth {
+	border-radius: 5px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+#TubPlayFrame .curveLeft {
+	border-radius: 5px;
+	border-left: 1px solid #ccc;
+}
+#TubPlayFrame .curveRight {
+	border-radius: 5px;
+	border-right: 1px solid #ccc;
+}
+#TubPlayplayer .left {
+	float: left;
+}
+#TubPlayplayer .right {
+	float: right;
+}
+#TubPlayplayer .leftAbs {
+	left: 5px;
+}
+#TubPlayplayer .rightAbs {
+	right: 5px;
+}
+#TubPlayFrame .leftAbs-0 {
+	left: 0;
+}
+#TubPlayFrame .rightAbs-0 {
+	right: 0;
+}
+#TubPlayFrame .rightAbs-0-top-mid {
+	right: 10px;
+	top: 50%;
+	position: absolute;
+}
+#TubPlayFrame .leftAbs-0-top-mid {
+	left: 10px;
+	top: 50%;
+	position: absolute;
+}
+#TubPlayFrame #replay {
+	font-size: 11px;
+	left: 0;
+	z-index: 9999999;
+	background: rgba(13,8,8,0.62);
+	padding: 0 12px;
+	border-right: 1px solid #ccc;
+	border-radius: 5px;
+}
+#TubPlayFrame .totalAbs-0 {
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+#TubPlayFrame span#offline, #TubPlayFrame span#interwaiter {
+	padding: 5px 5px;
+	max-width: 180px;
+	height: 40px;
+	line-height: 20px;
+	border: 1px solid #555;
+	z-index: 999999;
+	text-align: center;
+	background: rgba(13,8,8,0.62);
+	overflow:hidden;
+}
+#TubPlayFrame span#offline{position: absolute;bottom:2px;left:2px;height: 20px;}
+#TubPlayFrame span#ErroReporter i, #TubPlayFrame span#interwaiter i {
+	font-size: 150%;
+	margin:5px 5px;
+}
+#TubPlayFrame span#ErroReporter span, #TubPlayFrame span#interwaiter span {
+	display: block;
+	font-size: 12px;
+}
+#TubPlayFrame span#ErroReporter {
+	max-height: 100px;
+	max-width: 98%;
+	background: #000;
+}
+#TubPlayFrame span#ErroReporter span:nth-child(3) {
+	color: green;
+	font-size: 150%;
+}
+#TubPlayFrame span#ErroReporter span.error {
+	border-bottom: solid red 2px;
+	font-size: 120%;
+}
+#TubPlayFrame span#interwaiter .error {
+	color: red;
+	background: #fff;
+	float: left;
+	margin-left: 10px;
+	padding: 3px 4px;
+	border-radius: 20px;
+}
+#TubPlayFrame span#interwaiter i.fa-play {
+	padding: 0 8px;
+	cursor: pointer;
+}
+#TubPlayFrame .iScrollVerticalScrollbar {
+	border:none;
+	background:none;
+	position: absolute;
+	right:5px;
+	z-index:0;
+}
+#TubPlayFrame .hideMe {
+	display: none;
+}
+#TubPlayFrame #Listhoder .contRoler:hover, #TubPlayFrame .suade:hover {
+	-webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	-moz-box-shadow: 0 0px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+}
+#TubPlayFrame .suade {
+	-webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.3), 0 0 40px #555 inset;
+	-moz-box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #555 inset;
+	box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #555 inset;
+	overflow: hidden;
+}
+#TubPlayFrame .dark {
+	background-color: #111;
+}
+
+#TubPlayFrame #TubPlayInfo, #TubPlayFrame .TubPlayplayer {
+	max-width: 100%;
+	overflow: hidden;
+	padding-bottom: 10px;
+	background-color: #fff;
+	border-radius: 5px;
+	font-size: 13px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#TubPlayFrame .TubPlayplayer {
+	height: auto!important;
+}
+#TubPlayFrame #playerHolder #TubEntertain, #TubPlayFrame #playerHolder #tubView, #TubPlayFrame #playerHolder #tubVideo, #TubPlayFrame #playerHolder video, #TubPlayFrame span.spining, #TubPlayFrame #playerHolder audio, #TubPlayFrame #playerHolder iframe, .TubIframe iframe, #TubPlayFrame .TubPopUp .isRuning {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#TubPlayFrame #playerHolder #TubEntertain, #TubPlayFrame #playerHolder iframe, #TubPlayFrame #playerHolder #tubView, #TubPlayFrame #playerHolder #tubVideo, #TubPlayFrame #playerHolder video, #TubPlayFrame #playerHolder audio, .TubIframe iframe {
+	width: 98%;
+	height: 98%;
+}
+#TubPlayFrame #TubPlayOver {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 40000;
+	cursor: pointer;
+	background: rgba(4,4,4,0.1);
+}
+#TubPlayFrame #TubPlayOver div#talker {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin-top: 100px;
+	overflow: hidden;
+	text-align: left;
+	line-height: 20px;
+	width: 250px;
+	height: 40px;
+	color: #fff;
+	
+}
+
+#TubPlayFrame #TubPlayOver div#talker span#runer {
+	color: #fff
+}
+
+#TubPlayFrame #TubPlayOver div#talker i {
+	line-height: 50px;
+	font-size: 200%;
+	float:left;
+}
+#TubPlayFrame #RunerPlaylist ul li.waiters i {
+	color: #3e64ad;
+	top: 40px;
+	left: 0;
+	right: 0;
+	margin-right: 5px;
+	position: absolute;
+	display: block;
+	font-size: 300%;
+	margin-bottom: 30px;
+}
+#TubPlayFrame span.spining {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	color: #fff;
+	padding: 5px 5px;
+	font-size: 11px;
+	background: #3e64ad;
+	-webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	-moz-box-shadow: 0 0px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	-webkit-box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	-moz-box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+	box-shadow: 0 15px 10px -10px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.3), 0 0 40px #111 inset;
+}
+#TubPlayFrame #RunerPlaylist ul li.waiters {
+	z-index: 900;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 0;
+	
+	box-sizing: border-box;
+	max-width: 185px;
+	width: 185px;
+	height: 215px;
+}
+#TubPlayFrame span#TokenRun {
+	font-size: 12px;
+	width: 200px;
+	max-height: 20px;
+	padding:5px 10px;
+	text-align:center;
+	line-height:18px;
+	color: #fff;
+	z-index:2000;
+	background-color:#3e64ad;
+}
+#TubPlayFrame span#TokenRun i {margin:0 5px;}
+#TubPlayFrame span#LisTokenRun {
+	font-size: 12px;
+	width: 230px;
+	height: 100%;
+	line-height: 100%;
+	margin-top: 2px;
+	color: #fff;
+}
+#TubPlayFrame span#LisTokenRun i {
+	font-size: 200%;
+}
+#TubPlayFrame #playerHolder{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+	padding-top: 0px;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+
+#TubPlayFrame #playerHolder .rayLeadOut {
+	display:block;
+	position: absolute;
+	line-height: 20px;
+	height: 80px;
+	max-height:80px;
+	width:280px;
+	padding: 5px 5px;
+	margin: 0;
+	bottom: 0;
+	z-index: 50000;
+	background-color: rgba(0,0,0,0.8);
+	overflow: hidden;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+#TubPlayFrame #playerHolder #rayLead img {
+	float:right;
+	margin-right:5px;
+	height:50px;
+	width:50px;
+}
+#TubPlayFrame #playerHolder #rayLead i{
+	font-size:200%;
+	margin:0 10px;
+	float:left;
+}
+#TubPlayFrame #playerHolder #rayLead span {
+	width: 100%;
+	text-align: right;
+	max-height: 20px;
+}
+#TubPlayFrame #playerHolder #rayLead span.skipBnt {
+	display: block;
+}
+#TubPlayFrame #playerHolder #rayLead span.skipBnt span {
+	background: green;
+	cursor: pointer;
+	padding: 0 30px;
+	position: relative;
+}
+#TubPlayFrame #playerHolder #rayLead span.skipBnt span:after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 5px;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid white;
+}
+#TubPlayFrame #playerHolder #rayLead span.ProNote em {
+	color: #3e64ad;
+}
+#TubPlayFrame .midBelt {
+	position: relative;
+	margin: 0 auto;
+	line-height: 30px;
+	height: 30px;
+}
+#TubPlayFrame .midBelt > a {
+	text-align: center;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	width: 60px;
+	background: #000;
+}
+#TubPlayFrame .midBelt > a:hover {
+	background: #3e64ad;
+}
+#TubPlayFrame .midBelt > a i {
+	font-size: 120%;
+	margin-left: 2px;
+	margin-top: 5px;
+}
+#TubPlayFrame .midBelt #marqueeHolder, #TubPlayFrame .midBelt #LisTitle {
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+}
+#TubPlayFrame .marquee span.name {
+	color: #fff;
+}
+#TubPlayFrame .marquee span.now,#TubPlayFrame .marquee span.name {
+	background:#FD0005;
+	padding:5px 8px;
+	border-radius:3px;
+}
+#TubPlayFrame .player {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	background-color: #111111;
+	-webkit-box-shadow: #B3B3B3 2px 2px 2px;
+	-moz-box-shadow: #B3B3B3 2px 2px 2px;
+	box-shadow: #B3B3B3 2px 2px 2px;
+	border: 1px solid #ADADAD;
+}
+#TubPlayFrame .player .controls, #TubPlayFrame .marquee {
+	width: 98%;
+	padding: 0 1%;
+	margin: 0 auto;
+	left: 0;
+	color: white;
+	overflow: hidden;
+	font-size: 13px;
+	text-align: center;
+}
+#TubPlayFrame #marqueeMid, #TubPlayFrame .marqee {
+	line-height: 30px;
+	max-height: 30px;
+	height: 30px;
+	background: #111;
+	color: #fff;
+	overflow: hidden;
+}
+#TubPlayFrame .marquee span.tyt {
+	color:orange;
+}
+#TubPlayFrame .marquee span.now {
+	padding: 0 10px;
+	line-height: 30px;
+	font-weight: normal;
+	position: absolute;
+	left: 1px;
+	background-color: #111;
+	border-radius: 5px;
+	padding-right: 6px;
+}
+
+#TubPlayFrame .marquee img#meterRead {
+position: absolute;
+bottom:3px;
+left:1px;
+background-color: #111;
+padding: 2px 7px;
+	}
+
+#TubPlayFrame #StandA, #TubPlayFrame #StandB {
+	position: relative;
+	min-height: 20px;
+	overflow: hidden;
+	margin: 5px auto;
+	background-color: #111111;
+}
+#TubPlayFrame #StandB span {
+	padding: 0 10px;
+	line-height: 20px;
+	height: 20px;
+	float: left;
+	display: block;
+	
+	color: #fff;
+}
+#TubPlayFrame #StandB span#AllSat {
+	float: right;
+}
+#TubPlayFrame #StandB span#nosignal i {
+	background: #fff;
+	color: #E94144;
+	margin:0 10px;
+	padding:1px 4px;
+	font-size:100%;
+}
+#TubPlayFrame #LisTitleHolder > a i, #TubPlayFrame .midBelt > a i.fa-toggle-on, #TubPlayFrame .midBelt > a i.fa-toggle-off {
+	margin-top: 7px;
+}
+
+#TubPlayFrame .player .controls {
+	line-height: 20px;
+	bottom: 0;
+	height: 80px;
+	padding-top: 0px;
+	text-align: center;
+	position: absolute;
+	z-index: 100;
+	border-bottom: #555555 solid 1px;
+	max-width: 98%;
+	background:rgba(11,11,11,0.41);
+	padding: 0 1%;
+}
+#TubPlayFrame .player .StreamControl{height: 40px;}
+#TubPlayFrame .player .controls #otherContents{
+	position:relative;
+	height:40px;
+	top:10px;
+		
+}
+/* Volume and seeker css*/
+
+#TubPlayFrame .player .controls #otherContents .volumeDown span#Vslider{
+margin-top:-18px;position:absolute;height:55px;width:20px; 
+
+}
+#TubPlayFrame .player .controls #otherContents .volumeDown span#Vslider span#VsliderVolume{
+position:absolute;
+height:80%;
+left:0;
+bottom:0;
+right:2px;
+top:0;
+margin:auto;
+width:2px;
+display:none;
+}
+#TubPlayFrame .player .controls #otherContents .volumeDown:hover span#Vslider span#VsliderVolume{display:block;}
+#TubPlayFrame .player .controls #PlayerRayContent{	
+	width: 96%;
+	max-width: 96%;
+	height:12px;
+	margin:auto;
+	position: relative;
+	overflow:hidden;
+	padding:6px  5px;}
+#TubPlayFrame .player .controls #PlayerRay{
+	float: left;
+	clear: left;
+	width: 98%;
+	margin:3px 1%;
+	height: 2px;
+}
+
+
+#TubPlayFrame .player .controls span#VsliderVolume .ui-slider-range,
+#TubPlayFrame .player .controls #PlayerRay .ui-slider-range {
+	background: #00ccff;
+	border-radius: none;
+	border-color: #000;
+}
+#TubPlayFrame .player .controls #PlayerRay .ui-slider-handle,
+#TubPlayFrame .player .controls #PlayerRay .ui-slider-handle, #TubPlayFrame .player .controls span#VsliderVolume .ui-slider-handle {
+	border-color: #00ccff;
+	background: #00bfff;
+	width: 12px;
+	height: 12px;
+	border-radius: 44px;
+	position: absolute;
+	
+}
+#TubPlayFrame .player .controls #PlayerRay .ui-slider-handle{top: -6px;}
+
+#TubPlayFrame .player .controls span#VsliderVolume .ui-slider-handle{left:-6px;}
+
+#TubPlayFrame .player .controls #PlayerRay .ui-slider-range:focus,
+#TubPlayFrame .player .controls #PlayerRay .ui-slider-handle:focus,
+#TubPlayFrame .player .controls span#VsliderVolume .ui-slider-range:focus,
+#TubPlayFrame .player .controls span#VsliderVolume .ui-slider-handle:focus{outline:none;border-radius: 44px;}
+
+
+#TubPlayFrame .player .controls .play, #TubPlayFrame .player .controls .pause, #TubPlayFrame .player .controls .rew, #TubPlayFrame .player .controls .fwd, #TubPlayFrame .player .controls .exitFull, #TubPlayFrame .player .controls .full, #TubPlayFrame .player .controls .volumeDown  {
+	height: 30px;
+	width: 30px;
+	font-size: 150%;
+	color: #fff;
+	cursor: pointer;	
+	padding:0 10px;
+}
+
+#TubPlayFrame .player .controls .exitFull,  
+#TubPlayFrame .player .controls .full, 
+#TubPlayFrame .player .controls #volumeHolder,
+#TubPlayFrame .player .controls .volumeDown ,
+#TubPlayFrame .player .controls .playFrame, 
+#TubPlayFrame .player .controls .pauseFrame, 
+#TubPlayFrame .player .controls .play, 
+#TubPlayFrame .player .controls .pause, 
+#TubPlayFrame .player .controls .rew, 
+#TubPlayFrame .player .controls .fwd {	
+	margin-left: 3%;
+}
+#TubPlayFrame .player .controls .exitFull:hover,  
+#TubPlayFrame .player .controls .full:hover, 
+#TubPlayFrame .player .controls #volumeHolder:hover,
+
+#TubPlayFrame .player .controls .volumeDown:hover ,
+#TubPlayFrame .player .controls .playFrame:hover, 
+#TubPlayFrame .player .controls .pauseFrame:hover, 
+#TubPlayFrame .player .controls .play:hover, 
+#TubPlayFrame .player .controls .pause:hover, 
+#TubPlayFrame .player .controls .rew:hover, 
+#TubPlayFrame .player .controls .fwd:hover {	
+	color: #00ccff;
+}
+
+#TubPlayFrame .player .controls .play, 
+#TubPlayFrame .player .controls .pause
+{
+padding:5px 10px;
+border:#00ccff solid 2px;
+border-radius:4px;
+}
+#TubPlayFrame .player .controls .pause, #TubPlayFrame .player .controls .pauseFrame, #TubPlayFrame .player .controls .exitFull, #TubPlayFrame .player .controls .exitFull, #TubPlayFrame .player .controls .volumeDown #unmute {
+	color: #FF6666;
+}
+#TubPlayFrame .player .controls span i {
+	margin-top: 0;
+}
+#TubPlayFrame .player .controls #Timer {
+	max-width: 100%;
+	width: 100%;
+	top: 0;
+	position: absolute;
+}
+#TubPlayFrame .player .controls span.timeNow, #TubPlayFrame .player .controls span.duraTion {
+	width: 100px;
+	height: 8px;
+	color: white;
+	line-height: 8px;
+	z-index: 1002;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 11px;
+	top:25px;
+	position: absolute;
+}
+#TubPlayFrame .player .controls span.duraTion {
+	 right:0;
+}
+#TubPlayFrame .player .controls span.timeNow {
+	 left:0;
+	
+}
+
+
+.TubPlayplayer #Listhoder {
+	margin: 10px auto;
+	padding-top: 8px;
+	position: relative;
+	max-width: 100%;
+	height: 730px;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0 3px 5px #111;
+	border-bottom: 5px solid #3e64ad;
+	border-top: 5px solid #3e64ad;
+	border-radius: 5px;
+}
+#TubPlayFrame .TubPlayplayer #RunerWrapper{
+	margin:0 auto;
+	position: relative;
+	max-width: 96%;
+	overflow: hidden;
+	height: 100%;
+		}
+
+.TubPlayplayer #Listhoder #RunerPlaylist {
+	max-width: 100%;
+	height: 100%;
+	z-index: 1;
+	margin: 0 auto;
+}
+#TubPlayFrame  #LisTitleHolder {
+	position:relative;
+	width: 100%;
+	background: #333;
+}
+#TubPlayFrame #LisTitleHolder a#LisTokenNext {
+	margin-right: 2px;
+}
+#TubPlayFrame #Listhoder .contRoler, #TubPlayFrame #SlidePlaylist .contRoler {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	position: absolute;
+	width: 20px;
+	height: 120px;
+	line-height: 50px;
+	top: 90px;
+	z-index: 300;
+	background: #111;
+	border: 1px solid #555;
+	cursor: pointer;
+	font-size: 300%;
+	display: none;
+}
+#TubPlayFrame #Listhoder .contRoler{top:300px;}
+#TubPlayFrame #SlidePlaylist .contRoler {
+	top: 5px;
+}
+#TubPlayFrame #Listhoder .contRoler:hover, #TubPlayFrame #SlidePlaylist .contRoler:hover {
+	background: #3e64ad;
+}
+#TubPlayFrame #Listhoder .contRoler i, #TubPlayFrame #SlidePlaylist .contRoler i {
+	display: block;
+	top: 30%;
+	position: absolute;
+	font-weight: 600;
+}
+#TubPlayFrame #Listhoder a.curveRight i, #TubPlayFrame #SlidePlaylist a.curveRight i {
+	right: 3px;
+}
+#TubPlayFrame #Listhoder a.curveLeft i, #TubPlayFrame #SlidePlaylist a.curveLeft i {
+	left: 3px;
+}
+#TubPlayFrame #Listhoder:hover a.contRoler, #TubPlayFrame #SlidePlaylist:hover a.contRoler {
+	display: block;
+}
+
+#TubPlayFrame .TubPlayplayer ul.playlist {
+	float:left;
+	list-style-type: none;
+	padding-left:0;
+	background-color:none;
+	width:1350px;
+	padding-bottom:20px;
+}
+
+#TubPlayFrame .TubPlayplayer ul.playlist li {
+	color: #111;
+	padding:0;
+	margin:4px 5px 4px 5px;
+	float:left;		
+	max-width: 275px;
+	width: 275px;
+	height: 120px;	
+	position: relative;	
+	text-align: center;
+	
+	overflow: hidden;
+	text-justify: inter-word;
+	text-transform: capitalize;
+	border-bottom: 1px solid #555;
+	background:#fff;
+	/*
+	-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright:5px;
+-moz-border-radius-bottomleft:5px;
+
+-moz-border-radius-bottomright:0px;
+-webkit-border-top-left-radius:0px;
+-webkit-border-top-right-radius:5px;
+-webkit-border-bottom-left-radius:5px;
+-webkit-border-bottom-right-radius:0px;
+border-top-left-radius:0px;
+border-top-right-radius:5px;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:0px;
+-moz-box-shadow: 0px 2px 2px #0a070a;
+-webkit-box-shadow: 0px 2px 2px #0a070a;
+box-shadow: 0px 2px 2px #0a070a;	
+*/
+}
+.TubPlayplayer ul.playlist li img{float:left;}
+
+.TubPlayplayer ul.playlist li div.content {
+	right:5px;
+	top:20px;
+	position: absolute;
+	width: 140px;
+	border:1px solid red;
+	height: 120px;
+	text-align:right;
+	line-height: 18px;
+	text-justify: inter-word;
+	text-transform: capitalize;
+	overflow: hidden;
+	
+	z-index:1;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li  a.MoreDetail:hover {
+	color: #3e64ad;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.playThis {
+	position: absolute;
+	top: 40%;
+	left: 1px;
+	line-height: 18px;
+	color: #fff;
+	padding: 5px 10px;
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 5px;
+	background: rgba(2, 2, 2, 0.7);
+	font-size: 150%;
+	z-index:20;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li .caption {
+	display:none;
+	position: absolute;
+	margin: auto;
+	top: 44%;
+	left: 0;
+	text-align:right;
+	background: rgba(2, 2, 2, 0.5);
+	padding: 5px;
+	max-height:30px;
+	height: 30px;
+	min-width:140px;
+	line-height:15px;
+	z-index:10;
+	
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.playThis:hover {
+	background: rgba(235,12,16,0.56);
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.uploadDate, 
+#TubPlayFrame .TubPlayplayer ul.playlist li  a.MoreDetail,
+#TubPlayFrame .TubPlayplayer ul.playlist li span.theLenght, 
+#TubPlayFrame .TubPlayplayer ul.playlist li span.iamNext {
+	position: absolute;
+	line-height: 20px;
+	padding: 0 12px;
+	color: #fff;
+	z-index:20;
+	text-align:center;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.uploadDate, 
+#TubPlayFrame .TubPlayplayer ul.playlist li  a.MoreDetail {
+bottom:0;	
+color:#009;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.iamNext i,
+#TubPlayFrame .TubPlayplayer ul.playlist li span.uploadDate i, 
+#TubPlayFrame .TubPlayplayer ul.playlist li  a.MoreDetail i {
+float:left;
+margin:2.5px 5px;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.iamNext {
+	top: -2px;
+	left: 0;
+	background: rgba(235,12,16,0.76);
+	max-width:100px;
+	border-left:1px groove rgba(235,12,16,1);
+	border-radius:4px;
+	}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.theLenght {
+	background: rgba(2, 2, 2, 0.7);	
+	right: 0;
+	top:0;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li span.uploadDate{
+left:0;	
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li  a.MoreDetail{
+right: 0;
+}
+#TubPlayFrame ul.playlist li.active {
+	
+}
+#TubPlayFrame ul.playlist li.active div.caption {
+	display: block;
+}
+#TubPlayFrame .TubPlayplayer ul.playlist li.active span.playThis {
+	background: #CC0033;
+}
+
+#TubPlayFrame #TubPlayInfo .TubPlaypage p::first-letter, #TubPlayplayer p::first-letter {
+	color: #00ccff;
+}
+#TubPlayplayer p.topintro {
+	text-align: center;
+}
+#TubPlayFrame .TubPlayplayer .TubPlaypage, #TubPlayInfo .TubPlaypage {
+	margin: 10px auto;
+	position: relative;
+	max-width: 94%;
+	height: auto;
+}
+#TubPlayFrame #upHere {
+	display: block;
+	height: 5px;
+}
+#TubPlayplayer #toTubPlay {
+	height: 40px;
+	margin: auto;
+	position: relative;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	margin-bottom: 5px;
+	line-height: 40px;
+	border-bottom: 1px #555 solid;
+	border-radius: 4px;
+	background-image: url(images/tubplaytop.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+#TubPlayplayer .current {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-radius: 4px;
+	color: #3e64ad;
+}
+#TubPlayplayer .dashBoard {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 1%;
+	width: 98%;
+	height:230px;
+	border-bottom: 1px #555 solid;
+	border-radius: 4px;
+	background: rgba(2, 2, 2, 0.7);
+	z-index: 200;
+}
+#TubPlayFrame .TubPlayplayer .showMenu:hover,#TubPlayplayer .dashBoard a.closePanel:hover {
+	text-decoration: none;
+	background: #3e64ad;
+}
+
+#TubPlayFrame a.closePanel ,#TubPlayplayer .showMenu {
+	text-align: center;
+	line-height: 30px;
+	height: 30px;
+	width: 80px;
+	margin: 5px 10px;
+	cursor: pointer;
+	position: relative;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
+	
+}
+#TubPlayplayer .showMenu  i,#TubPlayplayer .dashBoard a.closePanel i {font-size:150%;margin-top: 4px;}
+#TubPlayFrame a.closePanel {
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	cursor: pointer;	
+	z-index: 200;	
+}
+
+#TubPlayplayer .dashBoard div.dashMe {
+	position: relative;
+	margin: 5px auto;
+	overflow: hidden;
+	height: 35px;
+}
+#TubPlayplayer .dashBoard div.dashMe span:hover {
+	color: #3e64ad;
+}
+#TubPlayplayer .dashBoard div.dashMe:nth-child(2) {
+	height: 65px;
+}
+#TubPlayplayer .dashBoard div.dashMe:nth-child(3) {
+	height: 160px;
+}
+#TubPlayplayer .dashBoard div.dashMe form {
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 270px;
+	border-radius: 4px;
+	border-right: white solid 1px;
+	border-left: white solid 1px;
+	color: #fff;
+	padding: 0 5px;
+	height: 35px;
+	line-height: 35px;
+	background: rgba(2, 2, 2, 0.6);
+}
+#TubPlayplayer .dashBoard div.dashMe form input {
+	width: 85%;
+	line-height: 32px;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	text-transform: capitalize;
+}
+#TubPlayplayer .dashBoard div.dashMe form span#searchwaiter {
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 5px;
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	background-color: rgba(2, 2, 2, 0.1);
+}
+#TubPlayplayer .dashBoard div.dashMe form span#searchwaiter i {
+	font-size: 200%;
+}
+#TubPlayplayer p#formHolder button#submitTubPlay:focus, #TubPlayplayer p#formHolder input:focus, #TubPlayplayer p#formHolder button#submitTubPlay:active, #TubPlayplayer p#formHolder input:active, #TubPlayplayer p#formHolder button#submitTubPlay:hover, #TubPlayplayer p#formHolder input:hover {
+	outline: none;
+	background-color: rgba(2, 2, 2, 0.1);
+	border: none;
+}
+#TubPlayplayer .dashBoard div.dashMe button#submitTubPlay {
+	cursor: pointer;
+	text-indent: -99999px;
+	background-image: url(images/search-icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: rgba(2, 2, 2, 0.1);
+	width: 30px;
+	height: 100%;
+	float: right;
+	border: none;
+}
+#TubPlayplayer .dashBoard div.dashMe .SlideIn, #TubPlayplayer .dashBoard div.dashMe .LinkOut {
+	width: 25%;
+	float: left;
+	text-align: center;
+	margin-left: 1.75%;
+	margin-right: 1.75%;
+	display: block;
+	font-size: 100%;
+	padding: 5px 5px;
+	position: relative;
+	cursor: pointer;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .LinkOut i {
+	display: block;
+	font-size: 200%;
+	margin-bottom: 10px;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder {
+	width: 98%;
+	max-width: 98%;
+	height: 135px;
+	margin: 30px auto;
+	position: relative;
+	overflow: hidden;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul {
+	width: 8000px;
+	height: 100px;
+	overflow: hidden;
+	margin: 0;
+	background-color: rgba(2, 2, 2, 0.8);
+	position: absolute;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li {
+	float: left;
+	color: #111;
+	background-color: #fff;
+	margin: auto;
+	border-bottom: 1px solid #00b1dc;
+	padding: 5px;
+	display: inline;
+	max-width: 225px;
+	width: 225px;
+	max-height: 80px;
+	height: 80px!important;
+	position: relative;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-align: center;
+	overflow: hidden;
+	line-height: 15px;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li img {
+	float: left;
+	height: 50px;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li a {
+    color:#009!important;	
+	cursor: pointer;
+	bottom: 2px;
+	max-width: 100px;
+	width: 100px;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li span.titleHolder span.piTitler, #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li a {
+	position: absolute;
+	display: block;
+	padding: 3px 3px;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li a.PlayAll {
+	left: 5px;
+	
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li a.MoreDetail {
+	right: 5px;
+	
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li span.titleHolder span.piTitler {
+	top: 2px;
+	background-color: rgba(0,0,0,0.7);
+	color: #FFFFFF;
+}
+#TubPlayFrame .tokenNav a.moreData:hover, #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li a:hover {
+	color: white!important;
+	background: #3e64ad;
+}
+#TubPlayFrame #TubPlayplayer .dashBoard div.dashMe .SlidersHolder ul li span.listWaiter {
+	position: absolute;
+	margin: 0;
+	top: 10px;
+	left: 10px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	background-color: rgba(0,0,0,0.4);
+	color: #3e64ad!important;
+	font-size: 150%;
+}
+#TubPlayFrame .tokenNav {
+	position: absolute;
+	margin: auto;
+	line-height: 15px;
+	height: 20px;
+	bottom: 0;
+	z-index: 100;
+	text-align: center;
+	max-width: 100%;
+	width: 100%;
+}
+#TubPlayFrame .tokenNav .spining {
+	width: 20px;
+	height: 20px;
+}
+#TubPlayFrame .tokenNav a.moreData {
+	color: white!important;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	display: block;
+	width: 80px;
+	text-align: center;
+	height: 30px;
+	line-height:30px;
+}
+#TubPlayFrame .tokenNav a.moreData i {
+	margin: 0 5px;
+	margin-top: 2px;
+	font-size: 150%;
+}
+#TubPlayFrame i.moreDetail {
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	display: block;
+	padding: 3px 5px;
+	color: #fff;
+	background: #000;
+	font-size: 150%;
+}
+#TubPlayFrame i.moreDetail {
+	left: 95px;
+}
+#TubPlayFrame i.moreDetail:hover {
+	background: #3e64ad;
+}
+#TubPlayFrame li.playSome i.fa-info-circle {
+	right: 5px;
+}
+.TubPlayplayer ul.playlist li .caption a, .TubPlayplayer ul.playlist li .caption {
+	color: white!important;
+	z-index:10;
+}
+#TubPlayFrame #playerHolder #Tubshare {
+	top: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	height: 30px;
+	width: 146px;
+	padding-top: 0px;
+	line-height: 18px;
+	margin: auto;
+	z-index: 4000;
+	background-color: rgba(0,0,0,0.4);
+	overflow: hidden;
+}
+#TubPlayFrame #Tubshare a {
+	display: block;
+	float: left;
+	height: 18px;
+	width: 25%;
+	padding-top: 5px;
+	line-height: 18px;
+	font-size: 150%;
+	color: #fff;
+	text-align: center;
+}
+#TubPlayFrame #Tubshare a:first-child {
+	color: #00ccff;
+}
+#TubPlayFrame #TubPlayInfo span.ewa, #TubPlayFrame #Tubfooter a:hover, #TubPlayFrame #Tubshare a:hover {
+	color: #00ccff;
+}
+#TubPlayFrame #TubPlayInfo img {
+	float: left;
+	margin: 10px;
+}
+#TubPlayFrame #TubPlayInfo img#TubPlay {
+	float: right;
+}
+#TubPlayFrame #TubPlayInfo {
+	height: 0px;
+	margin: 5px auto;
+	position: relative;
+	overflow: hidden!important;
+}
+#TubPlayFrame #TubPlayInfo #TubPlaypageHolder {
+	height: 250px;
+	margin: 0 auto;
+	margin-top: 10px;
+	position: relative;
+	overflow: hidden!important;
+	border-bottom: 1px solid #555;
+	border-top: 1px solid #555;
+	padding-right: 10px;
+	border-radius: 5px;
+}
+#TubPlayFrame #Tubfooter {
+	background: #111;
+	height: 20px;
+	line-height: 18px;
+}
+#TubPlayFrame #Tubfooter a {
+	border: 1px solid #555;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 10px;
+}
+#TubPlayFrame #Tubfooter a#aboutTubPlay {
+	float: left;
+}
+#TubPlayFrame #Tubfooter {
+	font-size: 11px;
+	max-width: 100%;
+	margin: 2px auto;
+	position: relative;
+	padding: 10px;
+	text-align: center;
+}
+span.help {
+	color: green;
+}
+#TubPlayFrame span.errorShow span.error {
+	color: #CC3300;
+}
+#TubPlayFrame .noshow, 
+#TubPlayFrame .noshare, 
+#TubPlayFrame hideMe {
+	display: none;
+}
+#TubPlayFrame span.errorShow,  
+#TubPlayFrame .player:focus .noshow, 
+#TubPlayFrame .player:focus .noshare, 
+#TubPlayFrame .player:hover .noshow,
+#TubPlayFrame .player:hover .noshare, 
+#TubPlayFrame .player:active .noshow 
+#TubPlayFrame .player:active .noshare {
+	display: block;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+#TubPlayFrame span.errorShow {
+	line-height: 20px;
+	background: #333;
+	padding: 10px 10px;
+}
+::-webkit-input-placeholder {
+
+color:#ccc;
+font-family:'Nova Square', cursive;
+font-size:13px;
+text-transform:lowercase;
+}
+:-moz-placeholder {
+color:#ccc;
+font-family:'Nova Square', cursive;
+font-size:13px;
+text-transform:lowercase;
+}
+:-ms-input-placeholder {
+color:#ccc;
+font-family:'Nova Square', cursive;
+font-size:13px;
+text-transform:lowercase;
+}
+placeholder {
+	color: #ccc;
+	font-family: 'Nova Square', cursive;
+	font-size: 13px;
+	text-transform: lowercase;
+}
+*:-webkit-full-screen #playerHolder, *:-moz-full-screen #playerHolder, #TubPlayFrame #playerHolder:fullscreen {
+position:fixed;
+top:0;
+right:0;
+bottom:0;
+left:0;
+margin:0;
+box-sizing:border-box;
+width:100%;
+height:100%;
+object-fit:contain;
+background:#111;
+}
+#TubPlayFrame div.TubPopContent {	
+	text-align: justify;
+	font-size: 13px;
+	background: #555;
+	position: absolute;
+	margin: 0 auto;
+	padding:0 10px;
+	
+	width: 0;
+	max-height: 450px;
+	height: 450px;
+	color: #fff;
+	overflow-x: hidden;
+	overflow-y: auto;
+	z-index:4000;	
+}
+
+#TubPlayFrame div.TubPopContent .closeMe {
+	color: #fff;
+	cursor: pointer;	
+	right: 0px;
+	top: 50%;
+	position: absolute;
+	font-size: 200%;
+	line-height: 15px;
+	width: 20px;
+	height: 35px;
+	border:2px solid rgba(4,4,4,0.5);
+	z-index:4000;
+	background: rgba(4,4,4,0.5);
+}
+#TubPlayFrame div.TubPopContent .closeMe i{margin-top:10%;}
+#TubPlayFrame div.TubPopContent  .closeMe:hover {
+	color: #3e64ad;
+}
+#TubPlayFrame  div.TubPopContent .PopContent {
+	margin: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow:hidden;
+	max-height: 94%;
+	height: 94%;
+	max-width: 95%;
+	width: 95%;
+	line-height: 20px;
+	padding: 0 5px;
+	border-bottom: 1px solid #ccc;
+	border-radius: 6px;
+	margin-top:3%;
+}
+/***** External CSS *****/
+#TubPlayFrame .TubIframe {
+	color: #fff;
+	line-height: 20px;
+	padding: 0 5px;
+}
+#TubPlayFrame .TubIframe span.dViews {
+	display: block;
+	margin-top: 20px;
+	border-top: 1px solid #ccc;
+}
+#TubPlayFrame .TubIframe h3 {
+	font-size: 13px;
+	line-height: 20px;
+	color: #FFF;
+	margin:0;
+}
+#TubPlayFrame .TubIframe span.dViews i {
+	color: #fff;
+	font-size: 150%;
+	margin: 0 10px;
+}
+#TubPlayFrame .TubIframe img {
+	margin: 5px auto;
+	position: relative;
+	width: 280px;	
+}
+#TubPlayFrame .TubIframe span.ds i {
+	margin-top: 3px;
+}
+#TubPlayFrame .TubIframe #TubBnt i {
+	margin: 3px 5px;
+}
+#TubPlayFrame .TubIframe #TubBnt{margin-top: 8px;}
+#TubPlayFrame .TubIframe #TubBnt i.fa-heart {
+	color:red;
+}
+#TubPlayFrame .TubIframe #TubBnt a{color:#ccc!important;}
+#TubPlayFrame .TubIframe #TubBnt a:hover{color:#fff!important;}
+#TubPlayFrame .TubIframe #TubBnt a:nth-child(2){float:right;}
+
+#TubPlayFrame .TubIframe #MoreInfoDiv{
+	width: 100%;
+	height: 100px;	
+	margin:5px auto;
+	position: relative;	
+	overflow:hidden;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;		
+	}
+	#TubPlayFrame .TubIframe #MoreInfoDiv #InfoDiv{	
+	padding:0 10px;
+	width: 230px;
+	}
+#TubPlayFrame .TubIframe #InfoheadDiv{
+	max-height:50px;
+	line-height:18px;
+	margin:0 auto;
+	position: relative;	
+	overflow:hidden;}
+#TubPlayFrame .TubIframe .iScrollVerticalScrollbar{right:0;}
+
+#TubPlayFrame div.TubPopContent .PopContent span.isRuning {
+	width: 180px;
+	height: 80px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/***** Columns *****/
+
+ 
+#TubPlayFrame .tub-row [class*='tub-col-']:first-child {
+	margin-left: 0;
+}
+#TubPlayFrame [class*='tub-col-'] {
+	float: left;
+	margin-left: 1.75%;
+	overflow: hidden;
+}
+#TubPlayFrame .tub-col-1-1 {
+	width: 100%;
+}
+#TubPlayFrame .tub-col-1-2 {
+	width: 48.5%;
+}
+#TubPlayFrame .tub-col-1-3 {
+	width: 31.333%;
+}
+#TubPlayFrame .tub-col-2-3 {
+	width: 65.667%;
+}
+#TubPlayFrame .tub-col-1-4 {
+	width: 22.75%;
+}
+#TubPlayFrame .tub-col-3-4 {
+	width: 74.25%;
+}
+#TubPlayFrame .tub-col-1-5 {
+	width: 17.6%;
+}
+#TubPlayFrame .tub-col-1-6 {
+	width: 14.16%;
+
+}
+#TubPlayFrame .tub-col-1-7 {
+	width: 11.714%;
+}
+#TubPlayFrame .tub-col-1-8 {
+	width: 9.875%;
+}
+/*====Alternative socil bnt*/	
+.tub-share-buttons {
+	margin-bottom: 20px;
+	margin-bottom: 1.25rem;
+	padding: 10px;
+	background: #fff;
+	overflow: hidden;
+}
+#TubPlayFrame .tub-share-buttons a, #TubPlayFrame .tub-share-buttons a:hover {
+	color: #fff;
+}
+#TubPlayFrame .tub-share-buttons .fa {
+	display: inline-block;
+	font-size: 1.25em;
+	margin-right: 10px;
+}
+#TubPlayFrame .tub-share-button {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 12px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	padding: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#TubPlayFrame .tub-share-button:hover {
+	opacity: 0.9;
+}
+#TubPlayFrame .tub-facebook span {
+	background: #3e64ad;
+}
+#TubPlayFrame .tub-twitter span {
+	background: #6aadd1;
+}
+#TubPlayFrame .tub-pinterest span {
+	background: #de010d;
+}
+#TubPlayFrame .tub-googleplus span {
+	background: #cd3627;
+}
+#TubPlayFrame a.TubSocial span.tub-share-buttons {
+	color: #FFFFFF
+}
+/*====StanAlone CSS*/
+/***** Media Queries *****/
+@media screen and (max-width: 1020px) {
+
+}
+
+
+@media only screen and (max-width: 420px) {
+
+#TubPlayFrame .iScrollVerticalScrollbar {
+	display:none;
+}
+}
